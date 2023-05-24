@@ -1,0 +1,29 @@
+{
+  "name": "readtheroom",
+  "version": "1.0.0",
+  "description": "Environment variable readers and defaults configuration for TypeScript",
+  "scripts": {
+    "build": "rimraf dist/ && tsc && esbuild --platform=node --format=cjs src/index.ts > dist/index.js && esbuild --platform=node --format=esm src/index.ts > dist/index.mjs"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "gilbert",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gilbert/readtheroom.git"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.3",
+    "ospec": "^4.2.0",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "esbuild": "^0.17.19"
+  }
+}
