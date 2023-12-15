@@ -55,6 +55,13 @@ export const maxConnections = read('MAX_CONNECTIONS', Number);
 // so that your converter function retains a consistent input type.
 //
 export const maxConnections2 = read('MAX_CONNECTIONS', '4', Number);
+
+//
+// Reads from process.env.APP_CREDENTIALS
+// If present, parses the value as JSON and assumes its type.
+// If not present, throws.
+//
+const credentials = read<MyType>('APP_CREDENTIALS', JSON.parse)
 ```
 
 ### Env
